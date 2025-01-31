@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { getDatabase, ref, set, get } from "firebase/database";
+import { ref, set, get } from "firebase/database";
+import { database } from "./firebase"; // Import Firebase services
 
 const Registration = ({ setUser }) => {
   const [data, setData] = useState({
@@ -48,11 +49,9 @@ const Registration = ({ setUser }) => {
     if (!validateForm()) return;
 
     try {
-      const db = getDatabase();
-
       // Check if email already exists
       const emailRef = ref(
-        db,
+        database,
         `Authentication/${data.email.replace(/[.#$[\]]/g, "_")}`
       );
       const emailSnapshot = await get(emailRef);
@@ -63,7 +62,7 @@ const Registration = ({ setUser }) => {
       }
 
       // Check if mobile number already exists
-      const mobileRef = ref(db, `AuthenticationByMobile/${data.mobile}`);
+      const mobileRef = ref(database, `AuthenticationByMobile/${data.mobile}`);
       const mobileSnapshot = await get(mobileRef);
 
       if (mobileSnapshot.exists()) {
@@ -139,6 +138,7 @@ const Registration = ({ setUser }) => {
           {error.password && (
             <div className="error-message">{error.password}</div>
           )}
+
           <input
             type="text"
             name="college"

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { getDatabase, ref, get, child } from "firebase/database";
+import { ref, get, child } from "firebase/database";
+import { auth, database } from "./firebase"; // Import Firebase services
 
 const Login = ({ setUser }) => {
   const [email, setEmail] = useState("");
@@ -21,7 +22,7 @@ const Login = ({ setUser }) => {
     // If in "forgot password" mode, log in with just email
     if (showForgotPassword) {
       try {
-        const dbRef = ref(getDatabase());
+        const dbRef = ref(database); // Use the imported `database` service
         const snapshot = await get(child(dbRef, `Authentication`));
         if (snapshot.exists()) {
           const users = snapshot.val();
@@ -53,7 +54,7 @@ const Login = ({ setUser }) => {
       }
 
       try {
-        const dbRef = ref(getDatabase());
+        const dbRef = ref(database); // Use the imported `database` service
         const snapshot = await get(child(dbRef, `Authentication`));
         if (snapshot.exists()) {
           const users = snapshot.val();
