@@ -1,11 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getDatabase } from "firebase/database";
-import {
-  getAuth,
-  RecaptchaVerifier,
-  signInWithPhoneNumber,
-} from "firebase/auth";
+import { getAuth } from "firebase/auth";
 
 // Firebase configuration
 const firebaseConfig = {
@@ -18,29 +14,13 @@ const firebaseConfig = {
   appId: process.env.REACT_APP_FIREBASE_APP_ID,
   measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
+// Export the initialized Firebase services
 const auth = getAuth(app);
-auth.useDeviceLanguage();
+const database = getDatabase(app);
+const analytics = getAnalytics(app);
 
-// Function to set up reCAPTCHA
-const setUpRecaptcha = () => {
-  if (!window.recaptchaVerifier) {
-    window.recaptchaVerifier = new RecaptchaVerifier(
-      auth,
-      "recaptcha-container",
-      {
-        size: "invisible",
-        callback: (response) => {
-          console.log("reCAPTCHA verified");
-        },
-        "expired-callback": () => {
-          console.log("reCAPTCHA expired, reset it.");
-        },
-      }
-    );
-  }
-  return window.recaptchaVerifier;
-};
-
-export { auth, setUpRecaptcha, signInWithPhoneNumber };
+export { auth, database, analytics };
