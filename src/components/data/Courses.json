@@ -6,7 +6,7 @@
     "duration": "1 Hour",
     "category": "Web Development",
     "rating": 4.7,
-    "image": "/images/HTML.jpg",
+    "image": "https://instructoelearning.onrender.com/images/HTML.jpg",
     "videoUrl": "https://player.vimeo.com/video/1051541731",
     "level": "Beginner",
     "language": "English"
