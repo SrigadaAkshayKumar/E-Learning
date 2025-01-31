@@ -755,7 +755,7 @@ section {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.353), 0 1px 3px rgba(0, 0, 0, 0.375);
 }
 .course-card img {
-  height: 100%;
+  height: 50%;
   width: 95%;
 }
 .course-card h3 {
@@ -1228,6 +1228,7 @@ section {
     margin: 1rem 0;
   }
   .course-card {
+    height: 100%;
     width: 90%;
     margin: 10px;
   }
