@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getDatabase, ref, set, get } from "firebase/database";
-import { auth, setUpRecaptcha, signInWithPhoneNumber } from "./firebase";
 
 const Registration = ({ setUser }) => {
   const [data, setData] = useState({
@@ -12,14 +11,10 @@ const Registration = ({ setUser }) => {
     mobile: "",
     college: "",
     study: "",
-    otp: "",
   });
 
-  const [otpSent, setOtpSent] = useState(false);
-  const [otpConfirm, setOtpConfirm] = useState(null);
   const [error, setError] = useState({});
   const [success, setSuccess] = useState("");
-  const [otpVerified, setOtpVerified] = useState(false); // Track OTP verification
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -45,64 +40,12 @@ const Registration = ({ setUser }) => {
     return Object.keys(errors).length === 0;
   };
 
-  const sendOtp = async () => {
-    try {
-      setError({});
-
-      if (!/^\d{10}$/.test(data.mobile)) {
-        setError({ mobile: "Invalid mobile number. It should be 10 digits." });
-        return;
-      }
-
-      const phoneNumber = `+91${data.mobile}`;
-      const appVerifier = setUpRecaptcha();
-
-      const confirmationResult = await signInWithPhoneNumber(
-        auth,
-        phoneNumber,
-        appVerifier
-      );
-
-      setOtpSent(true);
-      setOtpConfirm(confirmationResult);
-      setSuccess("OTP sent successfully!");
-      window.alert("OTP sent successfully!");
-    } catch (error) {
-      console.error("OTP Error:", error);
-      setError({ otp: error.message });
-    }
-  };
-
-  const verifyOtp = async () => {
-    try {
-      if (!otpConfirm) {
-        setError({ otp: "OTP confirmation error." });
-        return;
-      }
-
-      await otpConfirm.confirm(data.otp);
-      setSuccess("OTP verified successfully!");
-      setOtpVerified(true);
-      window.alert("OTP verified successfully!");
-    } catch (error) {
-      console.error("OTP Verification Error:", error);
-      setError({ otp: "Invalid OTP. Please try again." });
-      window.alert("Invalid OTP. Please try again.");
-    }
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSuccess("");
 
-    // Check if OTP is verified
-    if (!otpVerified) {
-      window.alert("Verify your mobile number to register");
-      return; // Stop further execution
-    }
-
-    // Validate the form (only if OTP is verified)
-    if (!validateForm()) return; // Ensure form validation runs properly
+    // Validate the form
+    if (!validateForm()) return;
 
     try {
       const db = getDatabase();
@@ -224,36 +167,8 @@ const Registration = ({ setUser }) => {
             placeholder="Mobile Number"
           />
           {error.mobile && <div className="error-message">{error.mobile}</div>}
-          <div id="recaptcha-container"></div>
 
-          {!otpSent ? (
-            <button type="button" onClick={sendOtp}>
-              Send OTP
-            </button>
-          ) : (
-            <>
-              {!otpVerified && (
-                <>
-                  <input
-                    type="text"
-                    name="otp"
-                    value={data.otp}
-                    onChange={handleChange}
-                    placeholder="Enter OTP"
-                  />
-                  <button type="button" onClick={verifyOtp}>
-                    Verify OTP
-                  </button>
-                </>
-              )}
-            </>
-          )}
-
-          <p>Verify your mobile number to register</p>
-
-          <button type="submit" disabled={!otpVerified}>
-            Register
-          </button>
+          <button type="submit">Register</button>
         </form>
 
         {error.form && <div className="error-message">{error.form}</div>}
