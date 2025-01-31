@@ -6,7 +6,7 @@
     "duration": "1 Hour",
     "category": "Web Development",
     "rating": 4.7,
-    "image": "../images/HTML.jpg",
+    "image": "/images/HTML.jpg",
     "videoUrl": "https://player.vimeo.com/video/1051541731",
     "level": "Beginner",
     "language": "English"
@@ -18,7 +18,7 @@
     "duration": "1 Hour",
     "category": "Web Development",
     "rating": 4.8,
-    "image": "../images/Bootstrap.jpg",
+    "image": "/images/Bootstrap.jpg",
     "videoUrl": "https://player.vimeo.com/video/1051955785",
     "level": "Beginner",
     "language": "English"
@@ -30,7 +30,7 @@
     "duration": "1 Hour",
     "category": "Programming",
     "rating": 4.9,
-    "image": "../images/Mongodb.png",
+    "image": "/images/Mongodb.png",
     "videoUrl": "https://player.vimeo.com/video/1051954721",
     "level": "Intermediate",
     "language": "English"
@@ -42,7 +42,7 @@
     "duration": "8 weeks",
     "category": "Data Science",
     "rating": 4.8,
-    "image": "../images/dataScience.jpg",
+    "image": "/images/dataScience.jpg",
     "videoUrl": "https://player.vimeo.com/video/105154173",
     "level": "Begineer",
     "language": "English"
@@ -54,7 +54,7 @@
     "duration": "6 weeks",
     "category": "Programming",
     "rating": 4.9,
-    "image": "../images/python.png",
+    "image": "/images/python.png",
     "videoUrl": "https://player.vimeo.com/video/105154173",
     "level": "Begineer",
     "language": "English"
@@ -66,7 +66,7 @@
     "duration": "10 weeks",
     "category": "Data Science",
     "rating": 4.6,
-    "image": "../images/machine.jpg",
+    "image": "/images/machine.jpg",
     "videoUrl": "https://player.vimeo.com/video/105154173",
     "level": "Begineer",
     "language": "English"

@@ -83,7 +83,7 @@ function Courses() {
                   filteredCourses.map((course) => (
                     <div className="course-card" key={course.id}>
                       <img
-                        src={course.image || "default_image.jpeg"} // Use course image or default
+                        src={`${process.env.PUBLIC_URL}${course.image}`} // Dynamically load images
                         alt={course.title}
                       />
                       <h3>{course.title}</h3>
