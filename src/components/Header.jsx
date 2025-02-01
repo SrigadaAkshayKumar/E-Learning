@@ -47,6 +47,12 @@ function Header({ user, onLogout }) {
                   <div className="dropdown-menu">
                     <div
                       className="dropdown-item"
+                      onClick={() => handleOptionClick("/")}
+                    >
+                      Home
+                    </div>
+                    <div
+                      className="dropdown-item"
                       onClick={() => handleOptionClick("/Dashboard")}
                     >
                       Dashboard
