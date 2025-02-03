@@ -11,6 +11,7 @@ import Coursepage from "./components/Coursepage";
 import Footer from "./components/Footer";
 import Roadmap from "./components/Roadmap";
 import ProtectedRoute from "./components/ProtectedRoute"; // Import the ProtectedRoute component
+import Scrolltotop from "./components/Scrolltotop";
 
 function App() {
   const [user, setUser] = useState(undefined); // Change from null to undefined
@@ -35,6 +36,7 @@ function App() {
 
   return (
     <Router>
+      <Scrolltotop />
       <Header user={user} onLogout={handleLogout} />
       <main>
         <Routes>
