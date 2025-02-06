@@ -910,7 +910,7 @@ section {
   align-items: center;
   justify-content: space-evenly;
   background: linear-gradient(135deg, #74ebd5, #acb6e5);
-  padding: 20px;
+  padding: 20px 0;
 }
 
 /* Profile Section */
@@ -920,7 +920,7 @@ section {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
-  width: 400px;
+  width: 90%;
   height: 300px;
   margin-bottom: 20px;
 }
@@ -968,7 +968,7 @@ section {
   padding: 25px;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 400px;
+  width: 90%;
   height: 100%;
 }
 
@@ -1082,6 +1082,7 @@ section {
   }
   .course-card {
     width: 75%;
+    height: 100%;
   }
   .two-column-layout {
     display: flex;
@@ -1149,11 +1150,12 @@ section {
   }
   .categories {
     justify-content: center;
+    align-items: center;
     padding: 0;
     gap: 1rem;
   }
   .category-btn {
-    width: 50%;
+    width: 70%;
   }
   .popular-now {
     padding: 0;
@@ -1204,6 +1206,24 @@ section {
   }
   .recommendation h1 {
     font-size: 1.7rem;
+  }
+}
+@media (max-width: 431px) {
+  .course-card {
+    width: 85%;
+  }
+  .cat-btn {
+    flex-direction: column;
+    align-items: center;
+  }
+  .chatbot-level {
+    flex-direction: column;
+  }
+  .chatbot-level label {
+    margin: 0.5rem;
+  }
+  .video-container iframe {
+    height: 206px;
   }
 }
 @media (max-width: 360px) {
