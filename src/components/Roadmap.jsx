@@ -13,7 +13,9 @@ const Roadmap = () => {
   const responseContainerRef = useRef(null);
 
   // Initialize Generative AI API
-  const genAI = new GoogleGenerativeAI(process.env.GEMINI_API); // Replace with your actual API key
+  const genAI = new GoogleGenerativeAI(
+    "AIzaSyDZYfjDJa-a3ibu_0I7OidVUw2SQKnOFPU"
+  ); // Replace with your actual API key
   const model = genAI.getGenerativeModel({ model: "gemini-pro" }); // Use a supported model
 
   const handleSubmit = async (e) => {
