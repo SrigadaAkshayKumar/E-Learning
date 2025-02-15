@@ -920,7 +920,7 @@ section {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
-  width: 90%;
+  width: 40%;
   height: 300px;
   margin-bottom: 20px;
 }
@@ -968,7 +968,7 @@ section {
   padding: 25px;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 90%;
+  width: 40%;
   height: 100%;
 }
 
@@ -1112,6 +1112,10 @@ section {
   }
   .dashboard-container {
     flex-direction: column;
+  }
+  .profile-card,
+  .info-card {
+    width: 80%;
   }
   .search-c {
     height: 160px;
