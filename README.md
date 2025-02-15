@@ -17,19 +17,19 @@
 
 ### 🔹 **Home Page**
 
-![Home Page](./images/home.png)
+![Home Page](Images/home.png)
 
 ### 🔹 **Personalized Roadmap**
 
-![Personalized Roadmap](./images/roadmap.png)
+![Personalized Roadmap](Images/roadmap.png)
 
 ### 🔹 **Courses**
 
-![Courses](images/courses.png)
+![Courses](Images/courses.png)
 
 ### 🔹 **Course page**
 
-![Course page](/images/coursepage.png)
+![Course page](Images/coursepage.png)
 
 ---
 
