@@ -7,15 +7,13 @@
 ## 🚀 Features
 
 - 🎯 **AI-Powered Personalized Roadmap Generator** – Get customized learning paths based on your skills and goals.
-- 📚 **Multi-Language Support** – Access courses in various languages for a better understanding.
-- 📝 **Cheat Sheets & Notes** – Quickly review essential concepts with summarized content.
-- ⏳ **Estimated Reading Time** – Plan your study sessions efficiently with time estimates for each topic.
+- 📚 **Multi-Language Support** – Access courses in various languages for a better understanding. 
 - 🚀 **Optimized UI** – A clean and intuitive design for seamless navigation.
 - 🔍 **Search & Filter** – Easily find the right topics and resources.
 
 ---
 
-## 📸 Screenshots
+## 📸 Overview
 
 ### 🔹 **Home Page**
 
@@ -58,9 +56,8 @@
 
 ---
 
-## 🤝
+## 💡 Contributing
 
-Contributions are welcome! If you'd like to contribute, please fork the repository and create a pull
-request. Make sure to follow the standard coding conventions and best practices.
+**Contributions are welcome! Feel free to submit issues and pull requests.**
 
 ---
