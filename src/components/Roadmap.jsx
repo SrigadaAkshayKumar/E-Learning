@@ -14,6 +14,7 @@ const Roadmap = () => {
 
   // Initialize Generative AI API
   const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API); // Replace with your actual API key
+  console.log("Gemini API Key:", process.env.NEXT_PUBLIC_GEMINI_API);
   const model = genAI.getGenerativeModel({ model: "gemini-pro" }); // Use a supported model
 
   const handleSubmit = async (e) => {
