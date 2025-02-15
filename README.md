@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Instructo - AI-Powered Personalized Learning Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Instructo** is an **AI-driven educational platform** designed to enhance learning by generating **personalized roadmaps** and providing access to structured study materials. The platform focuses on **advanced computer science topics**, eliminating unnecessary concepts for an optimized learning experience.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- 🎯 **AI-Powered Personalized Roadmap Generator** – Get customized learning paths based on your skills and goals.
+- 📚 **Multi-Language Support** – Access courses in various languages for a better understanding.
+- 📝 **Cheat Sheets & Notes** – Quickly review essential concepts with summarized content.
+- ⏳ **Estimated Reading Time** – Plan your study sessions efficiently with time estimates for each topic.
+- 🚀 **Optimized UI** – A clean and intuitive design for seamless navigation.
+- 🔍 **Search & Filter** – Easily find the right topics and resources.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📸 Screenshots
 
-### `npm test`
+### 🔹 **Home Page**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Home Page](./images/homepage.png)
 
-### `npm run build`
+### 🔹 **Personalized Roadmap**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Personalized Roadmap](./images/roadmap.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🔹 **Course Page**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Course Page](./images/coursepage.png)
 
-### `npm run eject`
+### 🔹 **Cheat Sheets & Notes**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![Cheat Sheets](./images/cheatsheets.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🛠 Installation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone the repository:
 
-## Learn More
+   ```bash
+   git clone https://github.com/yourusername/instructo.git
+   cd instructo
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Install dependencies:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```bash
+   npm install
+   ```
 
-### Code Splitting
+3. Start the application:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   ```bash
+   npm start
+   ```
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🤝
 
-### Making a Progressive Web App
+Contributions are welcome! If you'd like to contribute, please fork the repository and create a pull
+request. Make sure to follow the standard coding conventions and best practices.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
